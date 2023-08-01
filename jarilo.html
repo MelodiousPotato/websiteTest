@@ -109,7 +109,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <!-- First Photo Grid-->
     <div class="w3-row-padding">
         <div class="w3-third w3-container w3-margin-bottom">
-        <img src="/images/itemElectronicNotice.webp" alt="'Home-Use Object Finder' After-Sales Feedback Form" style="width:100%" class="w3-hover-opacity" onclick=showLocation()>
+        <img id="myImg" src="/images/itemElectronicNotice.webp" alt="'Home-Use Object Finder' After-Sales Feedback Form" style="width:100%" class="w3-hover-opacity" onclick=showLocation()>
         <div class="w3-container w3-white">
         <p><b>'Home-Use Object Finder' After-Sales Feedback Form</b></p>
         </div>
@@ -141,7 +141,7 @@ var modal = document.getElementById("myModal");
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
+var captionText = document.getElementById("Locations");
 img.onclick = function(){
 modal.style.display = "block";
 modalImg.src = this.src;
