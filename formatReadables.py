@@ -87,7 +87,7 @@ def main(titles, formats):
         if x%3 ==0:
             print('<div class="w3-row-padding">')
         format = formats[x]
-        print(f'<div class="w3-third w3-container w3-margin-bottom">\n<img src="{format}" alt="{title}" style="width:100%" class="w3-hover-opacity">\n<div class="w3-container w3-white">\n<p><b>{title}</b></p>\n</div>\n</div>')
+        print(f'<div class="w3-third w3-container w3-margin-bottom">\n<img id="myImg" src="{format}" alt="{title}" style="width:100%" class="w3-hover-opacity">\n<div class="w3-container w3-white">\n<p><b>{title}</b></p>\n</div>\n</div>')
         print('<div id="defaultModal" class="modal">\n<span class="close">&times;</span>\n<img class="modal-content" id="img01">\n<div id="caption">Location</div>\n</div>')
         x+=1
 main(titles, formats)
