@@ -6,12 +6,13 @@ client = MongoClient("mongodb+srv://MelodiousPotato:zDOl7vurqaquebMJ@cluster0.ew
 db = client["readables"]
 images = db["images"]
 
-im = Image.open("/Users/rebekahmou/Desktop/Readables/A Fool's Play.png")
+im = Image.open("Readables/A Fool's Play.png")
 
 image_bytes = io.BytesIO()
 im.save(image_bytes, format='PNG')
 
 image = {
+    'name': "A Fool's Play",
     'data': image_bytes.getvalue()
 }
 
