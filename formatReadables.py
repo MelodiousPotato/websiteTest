@@ -82,12 +82,13 @@ formats = ["/images/itemElectronicNotice.webp",
 
 def main(titles, formats):
     x = 0
-    print('<div class="w3-row-padding">')
     for title in titles:
         if x%3 ==0:
             print('<div class="w3-row-padding">')
         format = formats[x]
         print(f'<div class="w3-third w3-container w3-margin-bottom">\n<img class="myImages w3-hover-opacity" id="myImg" src="{format}" alt="{title}" style="width:100%">\n<div class="w3-container w3-white">\n<p><b>{title}</b></p>\n</div>\n</div>')
         print('<div id="defaultModal" class="modal">\n<span class="close">&times;</span>\n<img class="modal-content" id="img01">\n<div id="caption">Location</div>\n</div>')
+        if x%3 ==0:
+            print('<\div>')
         x+=1
 main(titles, formats)
