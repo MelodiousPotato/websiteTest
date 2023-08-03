@@ -2,7 +2,7 @@ from pymongo import MongoClient
 from PIL import Image
 import io
 
-client = MongoClient("mongodb+srv://MelodiousPotato:zDOl7vurqaquebMJ@cluster0.ewhvwvs.mongodb.net/test")
+client = MongoClient("urmom")
 db = client["readables"]
 images = db["images"]
 
