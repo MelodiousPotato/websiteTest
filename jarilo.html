@@ -107,12 +107,27 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 
     <!-- Content -->
-  <div class="w3-container">
-    <h3>Under Construction! Please come back later~</h3>
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+      <img class="myImages w3-hover-opacity" id="myImg" src="https://i.imgur.com/97dgP1r.png" alt="Obtained after completeing the Asta's Companion Mission 'You Already Know Me'" style="width:100%">
+      <div class="w3-container w3-white">
+      <p><b>Floriography Manual Attached to a Bouquet</b></p>
+      </div>
+      </div>
+    </div>
+
+
+     <!-- End page content -->
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption">Location</div>
     </div>
 
     
-
 <script>
 // Script to open and close sidebar
 function w3_open() {
@@ -124,23 +139,23 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
-// Get the modal
+// Modal Script
 var modal = document.getElementById("myModal");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
+var images = document.getElementsByClassName("myImages");
 var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("Locations");
-img.onclick = function(){
-modal.style.display = "block";
-modalImg.src = this.src;
-captionText.innerHTML = this.alt;
+var captionText = document.getElementById("caption");
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
 }
-
-// Get the <span> element that closes the modal
+// Close Button
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
 modal.style.display = "none";
 }
