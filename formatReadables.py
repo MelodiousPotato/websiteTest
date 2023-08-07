@@ -293,4 +293,4 @@ def main(titles, formats):
     
 
 main(xianTitles, xianFormats)
-print('<div id="defaultModal" class="modal">\n<span class="close">&times;</span>\n<img class="modal-content" id="img01">\n<div id="caption">Location</div>\n</div>')
+print('<div id="myModal" class="modal">\n<span class="close">&times;</span>\n<img class="modal-content" id="img01">\n<div id="caption">Location</div>\n</div>')
